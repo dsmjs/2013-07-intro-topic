@@ -22,7 +22,7 @@
         <div class="tabtable tabs-right">
             <ul class="nav nav-tabs">
             {% for link in site.pages | sort:order %}
-            <li {% if page.url == link.url %}class="active"{% endif %} ><a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a></li>
+            <li {% if page.url == link.url %}class="active"{% endif %} ><a href="{{ site.url }}{{ link.url }}" class="{{ link.order }}">{{ link.title }}</a></li>
             {% endfor %}
             </ul>
         </div>
