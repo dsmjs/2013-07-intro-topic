@@ -1,14 +1,14 @@
 
 function notstrict() {
-    console.log(this === window);
-    console.log(this);
+    log('not1', this === window); // not1
+    log('not2', this); // not2
 }
 notstrict();
 
 function strict() {
     "use strict";
-    console.log(this === window);
-    console.log(this);
+    log('strict1', this === window); // strict1
+    log('strict2', this); // strict2
 }
 strict();
 

@@ -1,21 +1,16 @@
 
 function func1(){
-    if (!this.val){
-        this.val = 1;
-    }
-    else {
-        this.val++;
-    }
+    this.val = this.val + 1 || 1;
     return this;
 }
 
-var x1 = func1();
-console.log(x1.val);
-var x2 = func1();
-console.log(x2.val);
-var y1 = new func1();
-console.log(y1.val);
-var y2 = new func1();
-console.log(y2.val);
+log('func1-1', func1().val); // func1-1
+log('func1-2', func1().val); // func1-2
 
+function func2(){
+    this.val = this.val + 1 || 1;
+}
+
+log('func2-1', new func2().val); // func2-1
+log('func2-2', new func2().val); // func2-2
 
